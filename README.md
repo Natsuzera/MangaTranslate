@@ -6,7 +6,7 @@
 ![YOLO](https://img.shields.io/badge/YOLO-v11-green.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.0+-orange.svg)
-![Ollama](https| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/teste.png" alt="teste.png - Teste de validação" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/teste_detected.jpg" alt="Resultado Detecção teste" width="300"/> |//img.shields.io/badge/Ollama-LLM-purple.svg)
+![Ollama](https://img.shields.io/badge/Ollama-LLM-purple.svg)
 
 Um sistema inteligente de detecção e tradução automática de texto em mangás em tempo real, utilizando técnicas avançadas de deep learning e processamento de imagens.
 
@@ -285,7 +285,7 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test/prev_manga.gif" alt="Sistema em Ação - Detecção e Tradução em Tempo Real" width="600"/>
+![Sistema em Ação](https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test/prev_manga.gif)
 
 *🎮 Sistema funcionando em tempo real: Captura → Detecção → Tradução → Renderização*
 
@@ -300,20 +300,51 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 
 #### 🎯 Resultados de Detecção em Imagens de Teste
 
-<div align="center">
-
-| 🖼️ **Imagem Original** | 🎯 **Resultado da Detecção** |
-|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test1.png" alt="test1.png - Mangá estilo shounen" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/test1_detected.jpg" alt="Resultado Detecção test1" width="300"/> |
-| **test1.png** - Mangá estilo shounen | **Detecções: 0** - Tempo: 146ms |
-| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/teste.png" alt="teste.png - Teste de validação" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/output/images/teste_detected.jpg" alt="Resultado Detecção teste" width="300"/> |
-| **teste.png** - Teste de validação | **Detecções: 0** - Tempo: 159ms |
-
-**⚡ Métricas de Performance:**
-- **test1.png**: Inference 146.4ms • Preprocess 10.4ms • Postprocess 53.8ms • **Total: 210.6ms**
-- **teste.png**: Inference 159.0ms • Preprocess 6.0ms • Postprocess 1.8ms • **Total: 166.8ms**
-
-</div>
+<table align="center">
+<tr>
+<th>🖼️ Imagem Original</th>
+<th>🎯 Resultado da Detecção</th>
+<th>📊 Métricas</th>
+</tr>
+<tr>
+<td>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test1.png" width="200"/>
+<br><sub><b>test1.png</b><br>Mangá estilo shounen</sub>
+</td>
+<td>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/test1_detected.jpg" width="200"/>
+<br><sub><b>Detecções: 0</b><br>Tempo: 146ms</sub>
+</td>
+<td>
+<sub>
+<b>⚡ Performance:</b><br>
+• Inference: 146.4ms<br>
+• Preprocess: 10.4ms<br>
+• Postprocess: 53.8ms<br>
+• <b>Total: 210.6ms</b>
+</sub>
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/teste.png" width="200"/>
+<br><sub><b>teste.png</b><br>Teste de validação</sub>
+</td>
+<td>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/teste_detected.jpg" width="200"/>
+<br><sub><b>Detecções: 0</b><br>Tempo: 159ms</sub>
+</td>
+<td>
+<sub>
+<b>⚡ Performance:</b><br>
+• Inference: 159.0ms<br>
+• Preprocess: 6.0ms<br>
+• Postprocess: 1.8ms<br>
+• <b>Total: 166.8ms</b>
+</sub>
+</td>
+</tr>
+</table>
 
 > **💡 Nota sobre os Resultados**: As imagens de teste não apresentaram detecções porque o modelo foi especificamente treinado para detectar texto em balões de mangá com características específicas (formato, contraste, contexto). Para demonstração completa, utilize imagens de mangá com balões de fala claramente definidos.
 
@@ -323,7 +354,7 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/results.png" alt="Resultados do Treinamento YOLO11" width="800"/>
+![Resultados do Treinamento](https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/results.png)
 
 **📊 Evolução das Métricas ao Longo do Treinamento**
 
@@ -349,7 +380,7 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/confusion_matrix.png" alt="Matriz de Confusão YOLO11" width="500"/>
+![Matriz de Confusão](https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/confusion_matrix.png)
 
 </div>
 
@@ -400,14 +431,20 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 
 #### 📊 Curvas de Performance Dinâmica
 
-<div align="center">
-
-| 🎯 **Curva F1-Score vs Confiança** | 🔍 **Curva Precisão vs Confiança** |
-|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/F1_curve.png" alt="Curva F1-Score" width="400"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/P_curve.png" alt="Curva Precisão" width="400"/> |
-| Pico: **F1=0.92** com confiança **0.483** | Máximo: **P=0.98** com alta confiança |
-
-</div>
+<table align="center">
+<tr>
+<td width="50%">
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/F1_curve.png" alt="F1 Curve"/>
+<br><b>🎯 Curva F1-Score vs Confiança</b>
+<br>Pico: <b>F1=0.92</b> com confiança <b>0.483</b>
+</td>
+<td width="50%">
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/P_curve.png" alt="P Curve"/>
+<br><b>🔍 Curva Precisão vs Confiança</b>
+<br>Máximo: <b>P=0.98</b> com alta confiança
+</td>
+</tr>
+</table>
 
 **🎛️ Configuração Ótima para Produção**:
 ```python
