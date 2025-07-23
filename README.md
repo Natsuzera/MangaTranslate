@@ -12,17 +12,17 @@ Um sistema inteligente de detecção e tradução automática de texto em mangá
 
 - [📖 Introdução](#-introdução)
 - [🛠️ Metodologia](#️-metodologia)
-  - [Arquitetura do Sistema](#arquitetura-do-sistema)
-  - [Pipeline de Processamento](#pipeline-de-processamento)
-  - [Técnicas Utilizadas](#técnicas-utilizadas)
-    - [1. Detecção de Texto com YOLO11](#1-detecção-de-texto-com-yolo11)
-    - [2. OCR e Tradução Multimodal](#2-ocr-e-tradução-multimodal)
-    - [3. Otimizações de Performance](#3-otimizações-de-performance)
+  - [Arquitetura do Sistema](#arquitetura-do-sistema)
+  - [Pipeline de Processamento](#pipeline-de-processamento)
+  - [Técnicas Utilizadas](#técnicas-utilizadas)
+    - [1. Detecção de Texto com YOLO11](#1-detecção-de-texto-com-yolo11)
+    - [2. OCR e Tradução Multimodal](#2-ocr-e-tradução-multimodal)
+    - [3. Otimizações de Performance](#3-otimizações-de-performance)
 - [📊 Resultados](#-resultados)
-  - [Demonstração](#demonstração)
-  - [Métricas de Treinamento](#métricas-de-treinamento)
-  - [Análise de Performance](#análise-de-performance)
-  - [Análise Crítica dos Resultados](#análise-crítica-dos-resultados)
+  - [Demonstração](#demonstração)
+  - [Métricas de Treinamento](#métricas-de-treinamento)
+  - [Análise de Performance](#análise-de-performance)
+  - [Análise Crítica dos Resultados](#análise-crítica-dos-resultados)
 - [🚀 Instalação e Uso](#-instalação-e-uso)
 - [📁 Estrutura do Projeto](#-estrutura-do-projeto)
 - [💻 Exemplos de Código](#-exemplos-de-código)
@@ -43,9 +43,9 @@ O MangaTranslate resolve o problema da inacessibilidade linguística em mangás 
 ## 🛠️ Metodologia
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Architecture-Real%20Time%20Pipeline-blueviolet?style=for-the-badge" alt="Architecture"/>
-  <img src="https://img.shields.io/badge/Processing-Multi%20Threading-orange?style=for-the-badge" alt="Processing"/>
-  <img src="https://img.shields.io/badge/Performance-GPU%20Accelerated-green?style=for-the-badge" alt="Performance"/>
+  <img src="https://img.shields.io/badge/Architecture-Real%20Time%20Pipeline-blueviolet?style=for-the-badge" alt="Architecture"/>
+  <img src="https://img.shields.io/badge/Processing-Multi%20Threading-orange?style=for-the-badge" alt="Processing"/>
+  <img src="https://img.shields.io/badge/Performance-GPU%20Accelerated-green?style=for-the-badge" alt="Performance"/>
 </div>
 
 ### Arquitetura do Sistema
@@ -83,20 +83,20 @@ O MangaTranslate implementa uma **arquitetura de pipeline em tempo real** compos
 
 ```mermaid
 graph TD
-    A[📱 Captura de Tela<br/>Região Configurável] --> B[🔍 Detecção YOLO<br/>Confiança > 0.483]
-    B --> C{🎯 Detecção Estável?<br/>5+ frames}
-    C -->|Não| A
-    C -->|Sim| D[📸 Extração de ROI<br/>+ Margem]
-    D --> E[🧹 Pré-processamento<br/>8 Etapas]
-    E --> F[🧠 OCR + Tradução<br/>LLM Multimodal]
-    F --> G[💾 Cache Resultado<br/>Hash MD5]
-    G --> H[🎨 Renderização<br/>Overlay]
-    H --> I[📺 Exibição Final]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style F fill:#e8f5e8
-    style H fill:#fff3e0
+    A[📱 Captura de Tela<br/>Região Configurável] --> B[🔍 Detecção YOLO<br/>Confiança > 0.483]
+    B --> C{🎯 Detecção Estável?<br/>5+ frames}
+    C -->|Não| A
+    C -->|Sim| D[📸 Extração de ROI<br/>+ Margem]
+    D --> E[🧹 Pré-processamento<br/>8 Etapas]
+    E --> F[🧠 OCR + Tradução<br/>LLM Multimodal]
+    F --> G[💾 Cache Resultado<br/>Hash MD5]
+    G --> H[🎨 Renderização<br/>Overlay]
+    H --> I[📺 Exibição Final]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style F fill:#e8f5e8
+    style H fill:#fff3e0
 ```
 
 ### Configuração da Captura de Tela
@@ -106,10 +106,10 @@ O sistema utiliza **captura de região específica** para otimizar performance e
 ```python
 # Configuração padrão para mangás em aplicativos
 self.monitor = {
-    "top": 25,      # Offset do topo (barra de título)
-    "left": 20,     # Offset da lateral
-    "width": 900,   # Largura da região de captura
-    "height": 1000  # Altura da região de captura
+    "top": 25,      # Offset do topo (barra de título)
+    "left": 20,     # Offset da lateral
+    "width": 900,   # Largura da região de captura
+    "height": 1000  # Altura da região de captura
 }
 ```
 
@@ -150,9 +150,9 @@ self.monitor = {
 
 **🎨 Augmentações de Cor (HSV)**:
 ```python
-hsv_h=0.015,  # Variação mínima de matiz
-hsv_s=0.7,    # Saturação robusta para diferentes scans
-hsv_v=0.4,    # Brilho adaptativo para condições de luz
+hsv_h=0.015,  # Variação mínima de matiz
+hsv_s=0.7,    # Saturação robusta para diferentes scans
+hsv_v=0.4,    # Brilho adaptativo para condições de luz
 ```
 
 **📊 Dataset e Validação**:
@@ -164,9 +164,9 @@ hsv_v=0.4,    # Brilho adaptativo para condições de luz
 #### 2. OCR e Tradução Multimodal
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Pipeline-8%20Step%20Enhancement-brightgreen?style=flat-square" alt="Pipeline"/>
-  <img src="https://img.shields.io/badge/Resolution-512px%20Max-blue?style=flat-square" alt="Resolution"/>
-  <img src="https://img.shields.io/badge/Format-PNG%20Optimized-orange?style=flat-square" alt="Format"/>
+  <img src="https://img.shields.io/badge/Pipeline-8%20Step%20Enhancement-brightgreen?style=flat-square" alt="Pipeline"/>
+  <img src="https://img.shields.io/badge/Resolution-512px%20Max-blue?style=flat-square" alt="Resolution"/>
+  <img src="https://img.shields.io/badge/Format-PNG%20Optimized-orange?style=flat-square" alt="Format"/>
 </div>
 
 **🔧 Pipeline de Pré-processamento (8 Etapas)**:
@@ -183,11 +183,11 @@ hsv_v=0.4,    # Brilho adaptativo para condições de luz
 **🧠 Configuração do LLM**:
 ```python
 ollama_options = {
-    'keep_alive': 60,        # Mantém modelo carregado (performance)
-    'num_ctx': 4096,         # Contexto expandido para compreensão
-    'temperature': 0.2,      # Baixa criatividade, alta precisão
-    'top_p': 0.9,           # Diversidade controlada nas traduções
-    'repeat_penalty': 1.1    # Evita repetições desnecessárias
+    'keep_alive': 60,        # Mantém modelo carregado (performance)
+    'num_ctx': 4096,         # Contexto expandido para compreensão
+    'temperature': 0.2,      # Baixa criatividade, alta precisão
+    'top_p': 0.9,           # Diversidade controlada nas traduções
+    'repeat_penalty': 1.1    # Evita repetições desnecessárias
 }
 ```
 
@@ -255,24 +255,24 @@ O sistema utiliza prompts específicos que consideram:
 ```python
 # Ajuste fino da região de captura
 monitor_config = {
-    "top": 50,       # Para aplicativos com barra de menu
-    "left": 100,     # Para readers com sidebar
-    "width": 1200,   # Largura personalizada
-    "height": 800    # Altura personalizada
+    "top": 50,       # Para aplicativos com barra de menu
+    "left": 100,     # Para readers com sidebar
+    "width": 1200,   # Largura personalizada
+    "height": 800    # Altura personalizada
 }
 
 # Configuração de sensibilidade
-stability_threshold = 3    # Frames para validação (3-10)
+stability_threshold = 3    # Frames para validação (3-10)
 confidence_threshold = 0.6 # Confiança mínima para detecção
 ```
 
 ## 📊 Resultados
 
 <div align="center">
-  <img src="https://img.shields.io/badge/F1%20Score-92%25-brightgreen?style=for-the-badge&logo=target" alt="F1 Score"/>
-  <img src="https://img.shields.io/badge/Precision-87.9%25-blue?style=for-the-badge&logo=accuracy" alt="Precision"/>
-  <img src="https://img.shields.io/badge/Recall-93.2%25-orange?style=for-the-badge&logo=search" alt="Recall"/>
-  <img src="https://img.shields.io/badge/mAP50-96%25-purple?style=for-the-badge&logo=bullseye" alt="mAP50"/>
+  <img src="https://img.shields.io/badge/F1%20Score-92%25-brightgreen?style=for-the-badge&logo=target" alt="F1 Score"/>
+  <img src="https://img.shields.io/badge/Precision-87.9%25-blue?style=for-the-badge&logo=accuracy" alt="Precision"/>
+  <img src="https://img.shields.io/badge/Recall-93.2%25-orange?style=for-the-badge&logo=search" alt="Recall"/>
+  <img src="https://img.shields.io/badge/mAP50-96%25-purple?style=for-the-badge&logo=bullseye" alt="mAP50"/>
 </div>
 
 ### 🎬 Demonstração
@@ -280,14 +280,14 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 #### 📹 Vídeo de Demonstração em Tempo Real
 
 <div align="center">
-  
+  
 https://github.com/user-attachments/assets/prev_manga.mp4
 
 *🎮 Sistema funcionando em tempo real: Captura → Detecção → Tradução → Renderização*
 
 **Recursos demonstrados no vídeo**:
 - ⚡ Detecção instantânea de balões de fala
-- 🧠 Tradução contextual inteligente  
+- 🧠 Tradução contextual inteligente  
 - 🎨 Overlay não-intrusivo mantendo estética original
 - 🔄 Cache inteligente evitando reprocessamento
 - 📊 Métricas de performance em tempo real
@@ -349,7 +349,7 @@ https://github.com/user-attachments/assets/prev_manga.mp4
 O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configurações otimizadas para detecção de texto em mangás:
 
 <div align="center">
-  
+  
 ![Resultados do Treinamento](runs/detect/train4/results.png)
 
 **📊 Evolução das Métricas ao Longo do Treinamento**
@@ -375,7 +375,7 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 #### 🔍 Matriz de Confusão - Análise Detalhada
 
 <div align="center">
-  
+  
 ![Matriz de Confusão](runs/detect/train4/confusion_matrix.png)
 
 </div>
@@ -445,19 +445,19 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 **🎛️ Configuração Ótima para Produção**:
 ```python
 optimal_config = {
-    "confidence_threshold": 0.483,  # 🎯 F1-Score máximo
-    "iou_threshold": 0.5,           # 📏 Overlap mínimo
-    "max_detections": 100,          # 🔢 Limite por imagem
-    "agnostic_nms": True            # 🧹 NMS agnóstico a classes
+    "confidence_threshold": 0.483,  # 🎯 F1-Score máximo
+    "iou_threshold": 0.5,           # 📏 Overlap mínimo
+    "max_detections": 100,          # 🔢 Limite por imagem
+    "agnostic_nms": True            # 🧹 NMS agnóstico a classes
 }
 ```
 
 ### 🔬 Análise Crítica dos Resultados
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" alt="Status"/>
-  <img src="https://img.shields.io/badge/Overfitting-Detected%20@%20Epoch%2020-warning?style=for-the-badge" alt="Overfitting"/>
-  <img src="https://img.shields.io/badge/Optimization-Required-informational?style=for-the-badge" alt="Optimization"/>
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" alt="Status"/>
+  <img src="https://img.shields.io/badge/Overfitting-Detected%20@%20Epoch%2020-warning?style=for-the-badge" alt="Overfitting"/>
+  <img src="https://img.shields.io/badge/Optimization-Required-informational?style=for-the-badge" alt="Optimization"/>
 </div>
 
 A análise integrada revela um modelo **altamente competente** para detecção de texto em mangás, com performance superior a benchmarks tradicionais, mas com oportunidades de otimização identificadas.
@@ -516,12 +516,12 @@ As perdas de treinamento (`train/box_loss`, `train/cls_loss`, `train/dfl_loss`) 
 
 ```mermaid
 graph LR
-    A[🔻 Confiança Baixa<br/>Recall: 98%<br/>Precisão: ~60%] --> B[⚖️ Ponto Ótimo<br/>F1: 92%<br/>Confiança: 0.483]
-    B --> C[🔺 Confiança Alta<br/>Recall: ~70%<br/>Precisão: 95%+]
-    
-    style A fill:#ffebee
-    style B fill:#e8f5e8
-    style C fill:#e3f2fd
+    A[🔻 Confiança Baixa<br/>Recall: 98%<br/>Precisão: ~60%] --> B[⚖️ Ponto Ótimo<br/>F1: 92%<br/>Confiança: 0.483]
+    B --> C[🔺 Confiança Alta<br/>Recall: ~70%<br/>Precisão: 95%+]
+    
+    style A fill:#ffebee
+    style B fill:#e8f5e8
+    style C fill:#e3f2fd
 ```
 
 </div>
@@ -567,16 +567,16 @@ graph LR
 ### 📋 Conclusão Executiva
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Overall%20Grade-A-brightgreen?style=for-the-badge&logo=star" alt="Grade"/>
-  <img src="https://img.shields.io/badge/Production%20Readiness-90%25-blue?style=for-the-badge&logo=rocket" alt="Production"/>
-  <img src="https://img.shields.io/badge/Recommended%20Action-Deploy%20with%20Monitoring-orange?style=for-the-badge&logo=deploy" alt="Action"/>
+  <img src="https://img.shields.io/badge/Overall%20Grade-A-brightgreen?style=for-the-badge&logo=star" alt="Grade"/>
+  <img src="https://img.shields.io/badge/Production%20Readiness-90%25-blue?style=for-the-badge&logo=rocket" alt="Production"/>
+  <img src="https://img.shields.io/badge/Recommended%20Action-Deploy%20with%20Monitoring-orange?style=for-the-badge&logo=deploy" alt="Action"/>
 </div>
 
 **✅ O modelo demonstra performance excepcional** para detecção de texto em mangás, superando benchmarks típicos da área. A **configuração ótima identificada** (threshold=0.483, F1=0.92) fornece excelente equilíbrio para aplicações em produção.
 
 **⚠️ Principais considerações** para deployment:
 1. **Implementar early stopping** em futuras iterações de treinamento
-2. **Monitorar performance** em dados reais vs. dataset de teste  
+2. **Monitorar performance** em dados reais vs. dataset de teste  
 3. **Ajustar threshold** conforme feedback dos usuários finais
 4. **Expandir dataset** para maior diversidade de estilos de mangá
 
@@ -632,21 +632,21 @@ uv run test.py
 
 ```
 MangaTranslate/
-├── 📄 main.py                 # Script de treinamento do modelo YOLO
-├── 📄 app.py                  # Aplicação principal de tradução em tempo real
+├── 📄 main.py                 # Script de treinamento do modelo YOLO
+├── 📄 app.py                  # Aplicação principal de tradução em tempo real
 ├── 📁 test/
-│   └── test.py                # Scripts de teste e validação
-├── 📁 dataset_*/              # Datasets de treinamento (Manga109, etc.)
+│   └── test.py                # Scripts de teste e validação
+├── 📁 dataset_*/              # Datasets de treinamento (Manga109, etc.)
 ├── 📁 output/
-│   ├── images/                # Resultados de teste
-│   └── primeiro_treinamento/  # Modelos treinados
-├── 📁 runs/detect/train4/     # Resultados do treinamento
-│   ├── results.png           # Métricas de treinamento
-│   ├── confusion_matrix.png  # Matriz de confusão
-│   ├── F1_curve.png          # Curva F1-Score
-│   └── P_curve.png           # Curva Precision
-├── 📄 pyproject.toml          # Configurações do projeto
-└── 📄 README.md               # Este arquivo
+│   ├── images/                # Resultados de teste
+│   └── primeiro_treinamento/  # Modelos treinados
+├── 📁 runs/detect/train4/     # Resultados do treinamento
+│   ├── results.png           # Métricas de treinamento
+│   ├── confusion_matrix.png  # Matriz de confusão
+│   ├── F1_curve.png          # Curva F1-Score
+│   └── P_curve.png           # Curva Precision
+├── 📄 pyproject.toml          # Configurações do projeto
+└── 📄 README.md               # Este arquivo
 ```
 
 ## 💻 Exemplos de Código
@@ -676,8 +676,8 @@ from app import MangaTranslator
 
 # Inicializa o tradutor
 translator = MangaTranslator(
-    model_path="output/primeiro_treinamento/file_tuning.pt",
-    target_language="português"
+    model_path="output/primeiro_treinamento/file_tuning.pt",
+    target_language="português"
 )
 
 # Inicia captura e tradução
