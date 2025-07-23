@@ -15,7 +15,6 @@ dataset_convertido
 
 # Large model files
 *.pt
-!output/primeiro_treinamento/file_tuning.pt
 
 # Keep test results and demonstration files
 !test/
