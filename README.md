@@ -6,7 +6,7 @@
 ![YOLO](https://img.shields.io/badge/YOLO-v11-green.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.0+-orange.svg)
-![Ollama](https://img.shields.io/badge/Ollama-LLM-purple.svg)
+![Ollama](https| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/teste.png" alt="teste.png - Teste de validação" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/teste_detected.jpg" alt="Resultado Detecção teste" width="300"/> |//img.shields.io/badge/Ollama-LLM-purple.svg)
 
 Um sistema inteligente de detecção e tradução automática de texto em mangás em tempo real, utilizando técnicas avançadas de deep learning e processamento de imagens.
 
@@ -285,7 +285,7 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/test/prev_manga.gif" alt="Sistema em Ação - Detecção e Tradução em Tempo Real" width="600"/>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test/prev_manga.gif" alt="Sistema em Ação - Detecção e Tradução em Tempo Real" width="600"/>
 
 *🎮 Sistema funcionando em tempo real: Captura → Detecção → Tradução → Renderização*
 
@@ -304,7 +304,7 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 
 | 🖼️ **Imagem Original** | 🎯 **Resultado da Detecção** |
 |:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/test1.png" alt="test1.png - Mangá estilo shounen" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/output/images/test1_detected.jpg" alt="Resultado Detecção test1" width="300"/> |
+| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test1.png" alt="test1.png - Mangá estilo shounen" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/test1_detected.jpg" alt="Resultado Detecção test1" width="300"/> |
 | **test1.png** - Mangá estilo shounen | **Detecções: 0** - Tempo: 146ms |
 | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/teste.png" alt="teste.png - Teste de validação" width="300"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/output/images/teste_detected.jpg" alt="Resultado Detecção teste" width="300"/> |
 | **teste.png** - Teste de validação | **Detecções: 0** - Tempo: 159ms |
@@ -323,7 +323,7 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/runs/detect/train4/results.png" alt="Resultados do Treinamento YOLO11" width="800"/>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/results.png" alt="Resultados do Treinamento YOLO11" width="800"/>
 
 **📊 Evolução das Métricas ao Longo do Treinamento**
 
@@ -349,7 +349,7 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/runs/detect/train4/confusion_matrix.png" alt="Matriz de Confusão YOLO11" width="500"/>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/confusion_matrix.png" alt="Matriz de Confusão YOLO11" width="500"/>
 
 </div>
 
@@ -404,7 +404,7 @@ O modelo foi treinado por **30 épocas** no dataset **Manga109**, com configura�
 
 | 🎯 **Curva F1-Score vs Confiança** | 🔍 **Curva Precisão vs Confiança** |
 |:---:|:---:|
-| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/runs/detect/train4/F1_curve.png" alt="Curva F1-Score" width="400"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/runs/detect/train4/P_curve.png" alt="Curva Precisão" width="400"/> |
+| <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/F1_curve.png" alt="Curva F1-Score" width="400"/> | <img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/runs/detect/train4/P_curve.png" alt="Curva Precisão" width="400"/> |
 | Pico: **F1=0.92** com confiança **0.483** | Máximo: **P=0.98** com alta confiança |
 
 </div>
