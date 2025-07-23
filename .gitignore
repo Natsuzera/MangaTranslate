@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+manga_translation_dataset
+manga109_text_detector
+dataset_processado_texto
+dataset_convertido
+
+# Virtual environments
+.venv
+
+# Large model files
+*.pt
+!output/primeiro_treinamento/file_tuning.pt
+
+# Keep test results and demonstration files
+!test/
+!output/images/
+!runs/detect/train4/
