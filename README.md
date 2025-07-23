@@ -285,7 +285,7 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 
 <div align="center">
   
-![Sistema em Ação](https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/test/prev_manga.gif)
+![Sistema em Ação](https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/test/prev_manga.gif)
 
 *🎮 Sistema funcionando em tempo real: Captura → Detecção → Tradução → Renderização*
 
@@ -312,7 +312,7 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 <br><sub><b>test1.png</b><br>Mangá estilo shounen</sub>
 </td>
 <td>
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/output/images/test1_detected.jpg" width="200"/>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/output/images/test1_detected.jpg" width="200"/>
 <br><sub><b>Detecções: 0</b><br>Tempo: 146ms</sub>
 </td>
 <td>
@@ -327,7 +327,7 @@ confidence_threshold = 0.6 # Confiança mínima para detecção
 </tr>
 <tr>
 <td>
-<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/main/teste.png" width="200"/>
+<img src="https://raw.githubusercontent.com/Natsuzera/MangaTranslate/master/teste.png" width="200"/>
 <br><sub><b>teste.png</b><br>Teste de validação</sub>
 </td>
 <td>
